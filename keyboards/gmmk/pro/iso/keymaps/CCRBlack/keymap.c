@@ -63,12 +63,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #ifdef ENCODER_ENABLE
 bool encoder_update_user(uint8_t index, bool clockwise) {
     if (IS_LAYER_ON(1)){
-        if (clockwise) {
-            rgb_matrix_increase_hue();
-        } else {
-            rgb_matrix_decrease_hue();
+        if ((get_mods() & MOD_BIT(KC_RALT)) == MOD_BIT(KC_RALT)) { // FN + Right Alt
+            if (clockwise) {
+                rgb_matrix_increase_hue();
+            } else {
+                rgb_matrix_decrease_hue();
+            }
+        } else if ((get_mods() & MOD_BIT(KC_RCLT)) == MOD_BIT(KC_RALT)) { // FN + Right Ctrl
+            if (clockwise) {
+                rgb_matrix_increase_sat();
+            } else {
+                rgb_matrix_decrease_sat();
+            }
+        } else { // FN
+             if (clockwise) {
+                rgb_matrix_increase_val();
+            } else {
+                rgb_matrix_decrease_val();
+            }
         }
-    } else {
+    } else { // Base layer
         if (clockwise) {
             tap_code(KC_VOLU);
         } else {
