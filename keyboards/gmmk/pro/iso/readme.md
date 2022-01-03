@@ -1,4 +1,4 @@
-# GMMK PRO (ISO)
+# GMMK PRO (ISO) CCRBlack Firmware
 
 A tenkeyless 75% keyboard made and sold by Glorious LLC. Equipped with the STM32 ARM Cortex-M4 microcontroller, with support for rotary encoders and three additional layouts. [More info at Glorious](https://www.pcgamingrace.com/products/glorious-gmmk-pro-75-barebone-black-reservation)
 

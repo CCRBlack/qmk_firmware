@@ -69,7 +69,7 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
             } else {
                 rgb_matrix_decrease_hue();
             }
-        } else if ((get_mods() & MOD_BIT(KC_RCLT)) == MOD_BIT(KC_RALT)) { // FN + Right Ctrl
+        } else if ((get_mods() & MOD_BIT(KC_RCTL)) == MOD_BIT(KC_RCTL)) { // FN + Right Ctrl
             if (clockwise) {
                 rgb_matrix_increase_sat();
             } else {
