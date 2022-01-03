@@ -114,6 +114,11 @@
 #define ENABLE_RGB_MATRIX_SOLID_SPLASH
 #define ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
 
+/* Additional options required for reactive RGB effects */
+#define RGB_MATRIX_KEYPRESSES //RGB_MATRIX_KEYRELEASES can be used instead
+#define RGB_MATRIX_FRAMEBUFFER_EFFECTS
+#define RGB_MATRIX_TYPING_HEATMAP_DECREASE_DELAY_MS 50
+
 /* 1000Hz USB polling - it's the default on stock firmware */
 #define USB_POLLING_INTERVAL_MS 1
 
