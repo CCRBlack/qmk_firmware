@@ -93,5 +93,9 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
 }
 #endif
 
-// Caps Lock
-//rgb_matrix_set_color(index, r, g, b)
+// Caps Lock Indicator
+void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
+    if (IS_HOST_LED_ON(USB_LED_CAPS_LOCK)) {
+        rgb_matrix_set_color(3, RGB_GREEN);
+     }
+}

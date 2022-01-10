@@ -116,8 +116,12 @@
 
 /* Additional options required for reactive RGB effects */
 #define RGB_MATRIX_KEYPRESSES //RGB_MATRIX_KEYRELEASES can be used instead
-#define RGB_MATRIX_FRAMEBUFFER_EFFECTS
+#define RGB_MATRIX_FRAMEBUFFER_EFFECTS //Heatmap & rain
 #define RGB_MATRIX_TYPING_HEATMAP_DECREASE_DELAY_MS 50
+
+/* RGB sleep */
+#define RGB_DISABLE_WHEN_USB_SUSPENDED true
+#define RGB_DISABLE_TIMEOUT 900000     // 15 minutes (15 * 60 * 1000ms)
 
 /* 1000Hz USB polling - it's the default on stock firmware */
 #define USB_POLLING_INTERVAL_MS 1
@@ -130,3 +134,5 @@
 
 /* Force NKRO on boot up regardless of the setting saved in the EEPROM (uncomment to enable it) */
 // #define FORCE_NKRO
+
+
